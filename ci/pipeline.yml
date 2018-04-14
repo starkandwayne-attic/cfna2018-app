@@ -30,11 +30,11 @@ meta:
     force_static_binary: false
 
   image:
-    name: concourse/static-golang
-    tag:  latest
+    name: golang
+    tag:  1.8-stretch
 
   github:
-    uri:          (( concat "https://github.com/" meta.github.owner "/" meta.github.repo ))
+    uri:          (( concat "https://" meta.github.owner ":" meta.github.access_token "@github.com/" meta.github.owner "/" meta.github.repo ))
     owner:        (( param "Please specify the name of the user / organization that owns the Github repository" ))
     repo:         cfna2018-app
     branch:       master
@@ -64,9 +64,9 @@ jobs:
                 tag:        (( grab meta.image.tag ))
             inputs:
               - name: git
-                path: (( concat "gopath/src/" meta.go.module ))
+                path: code
             run:
-              path: (( concat "./gopath/src/" meta.go.module "/ci/scripts/test" ))
+              path: ./code/ci/scripts/test
               args: []
             params:
               MODULE: (( grab meta.go.module ))
