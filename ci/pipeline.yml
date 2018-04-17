@@ -15,7 +15,7 @@ meta:
   name:     (( concat "pr-lab-" meta.github.owner ))
   release:  (( concat meta.name " Release" ))
   pipeline: (( grab meta.name ))
-  url:      https://ci.system.cfna2018.starkandwayne.com
+  url:      https://ci.cfna2018.starkandwayne.com
   target:   cfna2018
 
   git:
