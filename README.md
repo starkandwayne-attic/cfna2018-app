@@ -24,7 +24,7 @@ Fork the cfna2018-app repository, then create a personal access token with repo 
 
 ### Step 2
 SSH into the jumpbox: 
-`ssh cfdev#@pr-lab1.cfna2018.starkandwayne.com`
+`ssh cfdev#@pr-lab2.cfna2018.starkandwayne.com`
 
 _(replace # with the number given to you)_
 
@@ -54,4 +54,4 @@ Continue editing `ci/pipeline.yml` until you have GitHub PR Testing
 - Concourse: http://ci.system.cfna2018.starkandwayne.com
 - GitHub Pull Request Resource: https://github.com/jtarchie/github-pullrequest-resource
 ### SSH Information
-Server: pr-lab1.cfna2018.starkandwayne.com
+Server: pr-lab2.cfna2018.starkandwayne.com
