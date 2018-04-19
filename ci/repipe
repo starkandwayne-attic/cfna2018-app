@@ -49,7 +49,7 @@ if [[ -z ${URL} ]]; then
 fi
 if [[ -z $(fly targets | grep "$URL") ]]; then
   echo "Logging into Concourse"
-  fly -t $TARGET login -u ci -c $URL
+  fly -t $TARGET login -u ci -c $URL -k
 fi
 fly -t $TARGET sync
 
